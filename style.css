@@ -1,0 +1,773 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration:none;
+    list-style-type: none;
+}
+:root{
+    --primary-color:#53778f;
+    --light-clr: #777;
+    --red:red;
+    --bg-light:#eee;
+    --black:#2c3e50;
+    --white:#fff;
+    --transition: all 500ms ease-in-out;
+    --box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px;
+}
+h2{
+    text-align: center;
+}
+
+.btn{
+    color:var(--light-clr);
+    padding:0.6rem 1rem;
+    background: var(--primary-color);
+    color:var(--bg-light);
+    border-radius:0.2rem;
+    border:none;
+ }
+
+body{
+    background-color:var(--bg-light);
+    font-family: 'Belanosima', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:0.5rem;
+}
+header{
+    width:100%;
+    z-index: 1000;
+    height:4rem;
+    position:sticky;
+    top:0;
+    left:0;
+    right:0;
+    background-color: var(--white);
+
+}
+
+.container{
+    max-width:1000px;
+    margin:0 auto;
+
+
+}
+.logo{
+    font-size: 1.5rem;
+}
+ .header {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+ }
+
+ .header ul{
+    display: flex;
+   
+ }
+
+ .header ul li{
+    padding:1rem;
+    height: 100%;
+   
+ }
+
+ .header ul li:hover{
+    background-color: var(--primary-color);
+    color:var(--bg-light);
+ }
+ .header ul li a{
+    color:var(--light-clr)
+ }
+ .postjob{
+    color:var(--light-clr);
+    padding:1rem;
+    background: var(--primary-color);
+    color:var(--bg-light);
+    border-radius:0.2rem;
+ }
+ .toggle-btn{
+    display: none;
+    visibility: hidden;
+ }
+ @media screen and (max-width:768px){
+    .header ul{
+        position:absolute;
+        left: -25rem;
+        top:4.03rem;
+        flex-direction: column;
+        background-color: white;
+        width: 50%;
+        transition:all 1s ease ;
+        padding:1rem 0rem 3rem 0rem;
+      
+
+     }
+     .header ul.toggle{
+        left: 0;
+     }
+     .logo{
+        display: block;
+        margin:0 auto;
+     }
+     .toggle-btn {
+        display: block;
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        padding:2rem;
+       
+        
+     }
+    
+ }
+
+/* main */
+
+/* search */
+.search{
+    background-color: var(--white);
+    width: 20rem;
+    display: block;
+    margin:0 auto;
+}
+.search h2{
+    text-align: center;
+    padding-top:1rem
+}
+form{
+   display: flex;
+   flex-direction: column;
+    padding: 1rem;
+   gap:1rem
+
+}
+.search form label{
+   opacity: 0.5;
+}
+.search form  input{
+    border:none;
+    padding:1rem;
+    background-color: var(--bg-light);
+}
+.search form  input:focus{
+    border:none;
+}
+/* search */
+
+/* category */
+
+.category .row{
+    display: grid;
+    gap:1rem;
+    padding-top:2rem;
+}
+.category .row .col{
+    background-color: var(--white);
+    padding:1rem;
+    display: flex;
+    align-items: center;
+    color:var(--primary-color);
+    box-shadow: var(--box-shadow);
+    transition:var(--transition)
+
+
+}
+.category .row .col:hover i,
+.category .row .col:hover{
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+.category .row .col i{
+    background-color: var(--bg-light);
+    padding:0.3rem;
+    margin-right:0.4rem;
+    transition:var(--transition);
+}
+
+
+
+@media  screen and (min-width:480px) {
+    .category .row{
+        display: grid;
+    }
+}
+@media screen and (min-width:768px) {
+    .category .row{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (min-width:1000px) {
+    .category .row{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+/* Category */
+
+
+/* Latest jobs */
+.latestjob h2{
+    padding:2rem 0rem;
+}
+.latestjob .row{
+    display:grid;
+    gap: 1rem;
+}
+.latestjob .row .col{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    background-color: var(--white);
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+}
+.latestjob .row .col .details{
+    display: flex;
+    justify-content:space-between;
+}
+.latestjob .row .col .details i{
+    color:var(--primary-color);
+    padding:0.6rem;
+    background-color: var(--bg-light);
+}
+.latestjob .row .title{
+    display: flex;
+    margin-bottom: -0.5rem;
+}
+.latestjob .row .title p{   
+    display: flex;
+    flex-direction: column;
+}
+.latestjob .row img{
+    width:3rem;
+
+}
+.latestjob .row .m-title{
+    color:var(--light-clr);
+}
+.latestjob .row .m-title p{
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+}
+.latestjob .row .m-title p i{
+    color:var(--primary-color);
+    width: 1rem;
+}
+.latestjob .row .col .des{
+    display: block;
+}
+.latestjob .row .col .des span{
+    background-color: var(--bg-light);
+    color:var(--light-clr);
+    padding:.5rem;
+}
+.latestjob .row .col .des span i{
+    margin-right: 0.3rem;
+}
+.latestjob .viewall{
+    margin-top:1rem;
+    display: flex;
+}
+.latestjob .viewall button{
+    display: block;
+    margin:0 auto;
+    font-size: 1rem;
+}
+@media screen and (min-width:480px) {
+    .latestjob .row{
+        display:grid;
+        gap:1rem;
+    }
+}
+@media screen and (min-width:768px) {
+    .latestjob .row{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (min-width:1000px) {
+    .latestjob .row{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+/* Latest Jobs */
+
+
+
+
+/* About us start  */
+
+.about .title,
+.reviews .title{
+    border-top: 1rem solid var(--primary-color);
+    border-bottom: 1rem solid var(--primary-color);
+    background-color: var(--black);
+    padding:2rem 0rem;
+    color:var(--white)
+}  
+.about .col{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    padding:1rem;
+    background-color: var(--white);
+    letter-spacing: 0.02rem;
+}
+/* About us end */
+
+.reviews .row {
+    display: grid;
+    gap:1rem;
+    margin-top:1rem;
+
+}
+.reviews .row .col{
+   
+    padding:1rem;
+    display: flex;
+    align-items:start;
+    flex-direction: column;
+    gap:1.5rem;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+}
+.reviews .row .col .icon{
+    display: flex;
+}
+.reviews .row .col .icon i{
+    color:var(--primary-color)
+}
+.reviews .row .col .des{
+    display: flex;
+    flex-direction: column;
+    gap:0.4rem;
+}
+.reviews .row .col .des .rtitle{
+    color:var(--light-clr)
+}
+.reviews .row .col .profile{
+    display: flex;
+}
+.reviews .row .col .profile img{
+    width:3rem;
+    height:3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 0.6rem;
+}
+.reviews .row .col .profile .name{
+    color:var(--light-clr);
+}
+
+
+@media screen and (min-width:480px){
+    .reviews .row {
+        display: grid;
+        gap:1rem;
+       
+    }
+}
+@media screen and (min-width:768px){
+    .reviews .row {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:1rem;
+       
+    }
+}
+@media screen and (min-width:1000px){
+    .reviews .row {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:1rem;
+       
+    }
+}
+
+
+
+/* alljob */
+.alljob{
+    background-color: var(--white);
+}
+.alljob form{
+    display: flex;
+   
+}
+.alljob form input{
+   
+    padding:0.5rem;
+    border:none;
+    background-color: var(--bg-light);
+}  
+
+.alljob .date-posted{
+    display: flex;
+    padding:1rem;
+    gap:1rem
+}
+.alljob .date-posted select{
+    padding:0.5rem;
+    border:none;
+    background-color: var(--bg-light);
+}
+.alljob .date-posted select option:hover{
+   background-color: #eee;
+}
+
+
+.alljob .date-posted{
+    display: grid;
+}
+
+
+@media screen and (min-width:480px){
+    .alljob .date-posted{
+        display: grid;
+    }
+}
+@media screen and (min-width:768px){
+    .alljob .date-posted{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (min-width:1000px){
+    .alljob .date-posted{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+
+/* alljob */
+
+
+
+/* job details  */
+.job-details .row .col{
+    background-color: var(--white);
+    padding:1rem;
+
+
+}
+.job-details .row .col .jtitle{
+    display: flex;
+    flex-direction: column;
+    gap:0.4rem;
+}
+.job-details .row .col .jtitle a{
+    font-size: 0.8rem;
+    color:var(--primary-color)
+}
+.job-details .row .col .jtitle small{
+    display: flex;
+    align-items: center;
+    
+ 
+}
+.job-details .row .col .jtitle small span{
+    color:var(--light-clr)
+}
+.job-details .row .col .jtitle small i{
+    color:var(--primary-color);
+    margin-right:0.4rem;
+}
+
+.job-details .row .col   .info{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-light);
+    padding:1rem;
+    margin:1rem 0rem;
+    gap:1rem;
+
+    
+ 
+}
+.job-details .row .col   .info p{
+    color:var(--primary-color)
+}
+.job-details .row .col   .info small{
+    color:var(--light-clr)
+}
+.job-details .row .col .requirement{
+   list-style-type: disc;
+ 
+}
+.job-details .row .col .requirement ul{
+    display: flex;
+    flex-direction: column;
+    gap:0.3rem;
+    color:var(--light-clr);
+    padding:1rem;
+}
+.job-details .row .col .requirement li{
+    list-style: disc;
+}
+.job-details .row .col .requirement .buttonInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.job-details .row .col .requirement .buttonInfo span{
+    padding:0.6rem;
+    background-color: var(--bg-light);
+    display: flex;
+    gap:0.3rem;
+    align-items: center;
+    justify-content: center;
+}
+/* job details  */
+
+
+
+/* about company start */
+
+.about-company .row{
+
+    background-color: var(--white);
+}
+
+.about-company .row .col-1{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+}
+.about-company .row .col-1 .atitle{
+    background-color: var(--bg-light);
+    padding:3rem;
+    margin-top:1rem;
+}
+
+.about-company .row .col .about-title{
+    margin-top:1rem;
+   
+
+
+}
+.about-company .row .col-1 .atitle p{
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+    margin-top:0.4rem;
+
+}
+.about-company .row .col-1 .atitle p i{
+    color:var(--primary-color);
+
+}
+.about-company .row .col .des{
+    padding:1rem;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    margin-top:1rem;
+}
+/* about company end */
+
+/* Contact US start */
+.contact .title{
+    border-top: 1rem solid var(--primary-color);
+    border-bottom: 1rem solid var(--primary-color);
+    padding:2rem;
+    background-color: var(--black);
+    color:white
+}
+ 
+.contact .row{
+    display:grid;
+    gap:1rem;
+    margin-top:1rem;
+}
+.contact .row .col{
+    background-color: var(--white);
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--box-shadow);
+    padding:3rem;
+    gap:0.5rem;
+}
+.contact .row .col i{
+    padding:2rem;
+    background-color: var(--bg-light);
+    font-size: 2rem;
+    color:var(--primary-color);
+}
+.contact .row .col a,
+.contact .row .col p{
+    font-size: 0.8rem;
+    color:var(--light-clr)
+    
+}
+@media screen and (min-width:768px){
+    .contact .row {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+@media screen and (min-width:1000px){
+    .contact .row {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+.contact .send-message{
+    background-color: var(--white);
+    margin-top:1rem;
+    box-shadow: var(--box-shadow);
+}
+.contact  .send-message form{
+    display: grid;
+}
+.contact .send-message div{
+    display: flex;
+    flex-direction: column;
+}
+.contact  .send-message div label{
+    font-size: 0.8rem;
+    color:var(--light-clr);
+    margin:0.6rem 0rem;
+}
+.contact  .send-message div input,
+.contact  .send-message div textarea,
+.contact  .send-message div select{
+    padding:0.6rem;
+    background-color: var(--white);
+    border:none;
+    background-color: var(--bg-light);
+}
+.contact  .send-message div select option{
+    background-color: var(--bg-light);
+
+}   
+
+@media screen and (min-width:768px){
+    .contact  .send-message form{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .contact  .send-message form span{
+        display: flex;
+        align-items: end;
+        justify-content: flex-start;
+    }
+   
+}
+/* Contact US end */
+
+
+/* account login start*/
+.login-photo{
+    background:url('./img/login.png') rgba(0,0,0,0.7) ; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    height: auto;
+    height: 100vh;
+    
+}
+.login{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.login .row .col{
+    width: 30rem;
+    min-height:12rem;
+    background-color: var(--white);
+}
+.login .row .col form .input{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.login .row .col form .input input{
+    padding:1rem;
+    background-color: var(--bg-light);
+    border:none;
+}
+
+
+
+/* account login end*/
+
+
+
+
+/* main */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* footter section */
+footer{
+    padding-top:1rem;
+}
+ footer .row{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:1rem;
+ }
+
+ footer .row .col ul{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    margin-top:1rem;
+ }
+ footer .row .col ul li a{
+    color:var(--light-clr);
+    transition:var(--transition)
+ }
+ footer .row .col ul li a:hover{
+    padding: 0.5rem;
+ }
+
+ @media  screen and (max-width:768px) {
+    footer .row{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap:1rem;
+     }
+    
+ }
+  /* footter section */
+
