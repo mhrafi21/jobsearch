@@ -35,8 +35,8 @@ input:focus{
 
 body{
     background-color:var(--bg-light);
-    font-family: 'Belanosima', sans-serif;
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Belanosima', sans-serif;
+font-family: 'Prompt', sans-serif;
 }
 .container{
     max-width: 1200px;
@@ -220,13 +220,16 @@ form{
 
 
 /* Latest jobs */
+.alljob h2,
 .latestjob h2{
     padding:2rem 0rem;
 }
+.alljob .row,
 .latestjob .row{
     display:grid;
     gap: 1rem;
 }
+.alljob .row .col,
 .latestjob .row .col{
     display: flex;
     flex-direction: column;
@@ -235,72 +238,120 @@ form{
     padding: 1rem;
     box-shadow: var(--box-shadow);
 }
+.alljob .row .col .title,
+.latestjob .row .col .title{
+  display: flex;
+  flex-direction: row;
+  gap:0.4rem;
+  align-items: center;
+ justify-content: start;
+}
+.alljob .row .col .title img,
+.latestjob .row .col .title img{
+    width:3rem;
+    height: 3rem;
+    background-position: center;
+    
+}
+.alljob .row .col .title h6,
+.latestjob .row .col .title h6{
+    font-size: 0.8rem;
+}
+.alljob .row .col .title small,
+.latestjob .row .col .title small{
+    color:var(--light-clr);
+    opacity: 0.6;
+}
+.alljob .row .col .m-title,
+.latestjob .row .col .m-title{
+    display: flex;
+    flex-direction: column;
+    gap:0.3rem;
+}
+.alljob .row .col .details,
 .latestjob .row .col .details{
     display: flex;
     justify-content:space-between;
 }
+.alljob .row .col .details i,
 .latestjob .row .col .details i{
     color:var(--primary-color);
     padding:0.6rem;
     background-color: var(--bg-light);
 }
+.alljob .row .title,
 .latestjob .row .title{
     display: flex;
     margin-bottom: -0.5rem;
 }
+.alljob .row .title p,
 .latestjob .row .title p{   
     display: flex;
     flex-direction: column;
 }
+.alljob .row img,
 .latestjob .row img{
     width:3rem;
 
 }
+.alljob .row .m-title,
 .latestjob .row .m-title{
     color:var(--light-clr);
 }
+.alljob .row .m-title p,
 .latestjob .row .m-title p{
     opacity: 0.6;
     display: flex;
     align-items: center;
 }
+.alljob .row .m-title p i,
 .latestjob .row .m-title p i{
     color:var(--primary-color);
     width: 1rem;
 }
+.alljob .row .col .des,
 .latestjob .row .col .des{
     display: block;
 }
+.alljob .row .col .des span,
 .latestjob .row .col .des span{
     background-color: var(--bg-light);
     color:var(--light-clr);
-    padding:.5rem;
+    padding:.2rem 0.4rem;
+
+    
 }
+.alljob .row .col .des span i,
 .latestjob .row .col .des span i{
     margin-right: 0.3rem;
 }
+.alljob .viewall,
 .latestjob .viewall{
     margin-top:1rem;
     display: flex;
 }
+.alljob .viewall button,
 .latestjob .viewall button{
     display: block;
     margin:0 auto;
     font-size: 1rem;
 }
 @media screen and (min-width:480px) {
+    .alljob .row,
     .latestjob .row{
         display:grid;
         gap:1rem;
     }
 }
 @media screen and (min-width:768px) {
+    .alljob .row,
     .latestjob .row{
         display:grid;
         grid-template-columns: repeat(2,1fr);
     }
 }
 @media screen and (min-width:1000px) {
+     .alljob .row,
     .latestjob .row{
         display:grid;
         grid-template-columns: repeat(3,1fr);
@@ -402,57 +453,47 @@ form{
        
     }
 }
-
-
-
 /* alljob */
-.alljob{
+.alljob-filter{
     background-color: var(--white);
 }
-.alljob form{
+.alljob-filter form{
     display: flex;
-   
 }
-.alljob form input{
-   
+.alljob-filter form input{
     padding:0.5rem;
     border:none;
     background-color: var(--bg-light);
 }  
-
-.alljob .date-posted{
+.alljob-filter .date-posted{
     display: flex;
     padding:1rem;
     gap:1rem
 }
-.alljob .date-posted select{
+.alljob-filter .date-posted select{
     padding:0.5rem;
     border:none;
     background-color: var(--bg-light);
 }
-.alljob .date-posted select option:hover{
+.alljob-filter .date-posted select option:hover{
    background-color: #eee;
 }
-
-
-.alljob .date-posted{
+.alljalljob-filterob .date-posted{
     display: grid;
 }
-
-
 @media screen and (min-width:480px){
-    .alljob .date-posted{
+    .alljob-filter .date-posted{
         display: grid;
     }
 }
 @media screen and (min-width:768px){
-    .alljob .date-posted{
+    .alljob-filter .date-posted{
         display: grid;
         grid-template-columns: repeat(2,1fr);
     }
 }
 @media screen and (min-width:1000px){
-    .alljob .date-posted{
+    .alljob-filter .date-posted{
         display: grid;
         grid-template-columns: repeat(4,1fr);
     }
@@ -736,13 +777,15 @@ form{
  /* footter section */
 footer{
     padding-top:1rem;
+
 }
  footer .row{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:1rem;
+   
  }
-
+ footer .row .col{
+    padding:1rem;
+ }
  footer .row .col ul{
     display: flex;
     flex-direction: column;
@@ -751,19 +794,54 @@ footer{
  }
  footer .row .col ul li a{
     color:var(--light-clr);
-    transition:var(--transition)
+    transition:var(--transition);
+    font-size: 0.9rem;
+ }
+ footer .row .col ul li i{
+    margin-right:0.34rem;
  }
  footer .row .col ul li a:hover{
     padding: 0.5rem;
  }
 
- @media  screen and (max-width:768px) {
+ @media  screen and (min-width:768px) {
     footer .row{
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(2,1fr);
         gap:1rem;
      }
-    
+ }
+ @media screen and (min-width:1000px){
+      footer .row{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+     }
+ }
+
+ /* copy right */
+ .copyright {
+    background-color: var(--white);
+ }
+ .copyright .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .copyright .row .col{
+    padding:2rem;
+    width: 100%;
+    height: 100%;
+    margin:0 auto;
+ }
+ .copyright .row .col p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+ }
+ .copyright .row .col a:hover{
+    text-decoration:underline;
+    color:var(--primary-color);
  }
   /* footter section */
 
