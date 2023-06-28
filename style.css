@@ -18,7 +18,12 @@
 h2{
     text-align: center;
 }
-
+input{
+    border-radius:0.4rem
+}
+input:focus{
+    border:none
+}
 .btn{
     color:var(--light-clr);
     padding:0.6rem 1rem;
@@ -693,7 +698,7 @@ form{
     gap:1rem;
 }
 .login .row .col form .input input{
-    padding:1rem;
+    padding:0.7rem;
     background-color: var(--bg-light);
     border:none;
 }

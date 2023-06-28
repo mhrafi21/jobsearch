@@ -14,6 +14,7 @@
     <title>Job Search</title>
 </head>
 <body>
+    <!-- header start -->
 <header >
         <div class="container header">
             <a class = "logo" href="index.html">JobSearch</a>
@@ -22,46 +23,51 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="alljob.html">All Jobs</a></li>
-                <li><a href="index.html">Contact US</a></li>
+                <li><a href="login.html">Contact US</a></li>
                 <li><a href="index.html">Account</a></li>
                 <li><a class = "postjob btn" href="">Post Job</a></li>
             
             </ul>
         </div>
 </header>
+<!-- header end -->
 
-<!-- main -->
+<!-- main start  -->\
+
 <main>
-    <section>
+    <section  class = 'login-photo'>
         <div class="container">
-            <div class="about-company">
+            <div class="login">
                 <div class="row">
-                    <div class="col-1">
-                        <div class="atitle">
-                            <img src="./img/html5.png" alt="no image found">
-                            <div class = "about-title">IT infosays. co</div>
-                            <p><i class="fa-sharp fa-solid fa-location-dot"></i><small>Dhaka,Bangladesh</small></p>
-                        </div>
-                    </div>
                     <div class="col">
-                        <div class="des"><h3>About Company</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus molestias libero possimus quaerat sunt ullam quasi excepturi, architecto ea necessitatibus repudiandae, deserunt minus voluptatum nisi odit aliquid totam reprehenderit et?</p>
-                            <ul>
-                                <li><small>3 jobs posted</small></li>
-                                <li><small>established at 25-05-2018</small></li>
-                                <li><small>189+ working employees</small></li>
-                            </ul></div>
+                        <h4 style = 'text-align: center; padding:0.7rem 0rem;'>Welcome Back!</h4>
+                        <form action="" method="post">
+                          <div class="input">
+                            <input type="text" placeholder = "Enter your name" required>
+
+                            <input type="email" placeholder = " email" required>
+                            <input type="password" placeholder = "Enter your password" required>
+                            <input type="password" placeholder = "Confirm your password" required>
+                          </div>
+                          <div style = 'display: flex; flex-direction: column; gap:1rem'>
+                            <small>Already have an account?<a href="login.html"> login here</a></small>
+                          <div><input class = "btn" type="submit" value = "Login Now"></div>
+                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 </main>
-<!-- main -->
+
+<!-- main end -->
 
 
 
-<!-- footer -->
+
+
+<!-- footer start -->
 <footer>
     <div class="container">
         <div class="row">
@@ -99,7 +105,6 @@
     </div>
 </footer>
 <!-- footer -->
-
 <!-- custom js  -->
 <script src="script.js"></script>
 <!-- custom js  -->
