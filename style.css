@@ -676,16 +676,7 @@ form{
 
 
 /* account login start*/
-.login-photo{
-    background:url('./img/login.png') rgba(0,0,0,0.7) ; 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    object-fit: cover;
-    height: auto;
-    height: 100vh;
-    
-}
+
 .login{
  display: flex;
  align-items: center;
